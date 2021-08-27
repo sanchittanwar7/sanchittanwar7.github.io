@@ -1,12 +1,270 @@
-<html>
-  <script>
-    document.addEventListener("visibilitychange", function onPageUnload() {
-      if (document.visibilityState === 'hidden') {
-        console.log("hiding");
-      }
-    });
-  </script>
-  <body>
-    test
-  </body>
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <script type="text/javascript">
+        const startTime = Date.now();
+
+        !function(){function n(n,t){var r=i(n);return t&&(r=r("instance",t)),r}var r=[],c=0,i=function(t){return function(){var n=c++;return r.push([t,[].slice.call(arguments,0),n,{time:Date.now()}]),i(n)}};n._s=r,this.csa=n}();
+
+        /* Modify below configuration properties */
+        csa("Config", {
+            'Application': 'miniTV',
+            'Events.SushiEndpoint': 'https://unagi.amazon.com/1/events/com.amazon.csm.csa.prod'
+        });
+
+        var e = document.createElement("script"); e.src = "https://m.media-amazon.com/images/I/41mrkPcyPwL.js"; document.head.appendChild(e);
+
+        var myEvents = csa("Events", {producerId: "amazon-tv"});
+
+        function csaLogger(actionName, actionType) {
+            console.log('Logging events', actionName, actionType);
+            myEvents("log", {
+                "schemaId": "amazon_tv.AtvClientAppData.7",
+                "appSessionId": "41382bac-0282-402d-b35b-9e16c27475f3",
+                "amazonSessionId": "260-6293112-3939434",
+                "marketplaceId": "A1F83G8C2ARO7P",
+                "deviceId": "f5fcc75d251b46679b8de95f5fc68f1e",
+                "deviceType": "A1MPSLFC7L5AFK",
+                "deviceOs": "android",
+                "appVersion": "22.15.0.300",
+                "bundleVersion": "1.3.3",
+                "customerId": "amzn1.account.AFONDYVMWAO3FZSUQS6I6P5G2CIQ",
+                "parentalControlSettings": null,
+                "pagetype": "mweb-kpt",
+                "subPageType": null,
+                "impressions": null,
+                "player": {
+                    "titleId": null,
+                    "position": null,
+                    "subtitles": null,
+                    "videoQuality": null,
+                    "audioTrack": null,
+                    "contentType": null,
+                    "playbackState": null,
+                    "audioState": null,
+                    "playbackType": null,
+                    "fullscreen": null,
+                    "focus": null
+                },
+                "Action": {
+                    "actionName": `KPT:${actionName}`,
+                    "actionType": actionType.toString()
+                }
+            });
+        }
+
+    </script>
+
+    <meta charset="utf-8">
+    <title>Kaali Peeli Tales- Season 1 Episode 1</title>
+    <meta name="description" content="Kaali Peeli Tales is an anthology that is centered around the themes of romance, marriage, infidelity, homosexuality, forgiveness and divorce, each story offers a unique perspective on modern day relationships. The symbol of Mumbai, the iconic Kaali Peeli taxi, presents a common thread across all stories of the anthology.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Kaali Peeli Tales- Season 1" />
+    <meta property="og:description" content="Kaali Peeli Tales is an anthology that is centered around the themes of romance, marriage, infidelity, homosexuality, forgiveness and divorce, each story offers a unique perspective on modern day relationships. The symbol of Mumbai, the iconic Kaali Peeli taxi, presents a common thread across all stories of the anthology." />
+    <meta property="og:image" content="https://m.media-amazon.com/images/S/pv-target-images/fc42f8dab37b3fb8783b43028bcb27d43a92a936291cdfe89b0f88864d11e1e2._QL75_.jpg" />
+    <meta property="og:image:secure_url" content="https://m.media-amazon.com/images/S/pv-target-images/fc42f8dab37b3fb8783b43028bcb27d43a92a936291cdfe89b0f88864d11e1e2._QL75_.jpg" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Kaali Peeli Tales- Season 1" />
+    <meta property="twitter:description" content="Madmidaas Films" />
+    <meta property="twitter:image" content="https://m.media-amazon.com/images/S/pv-target-images/fc42f8dab37b3fb8783b43028bcb27d43a92a936291cdfe89b0f88864d11e1e2._QL75_.jpg" />
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <meta name="theme-color" content="#070d0e">
+
+    <style>
+        html, body {
+            font-family: AmazonEmber;
+            margin: 0;
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .minitv-header,
+        .minitv-video-metadata {
+            padding: 16px;
+        }
+        .minitv-header {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 0;
+        }
+        .minitv-header > img {
+            width: 140px;
+        }
+        .minitv-video-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+        .minitv-video-title {
+            font-size: 20px;
+        }
+        .minitv-video-parental {
+            font-size: 12px;
+            text-decoration: none;
+            color: #0091ff;
+        }
+        .minitv-video-metadata > div {
+            padding-bottom: 5px;
+        }
+        .minitv-video-rating {
+            font-size: 9px;
+            background-color: #1a2224;
+            padding: 2px 7px;
+            border-radius: 2px;
+        }
+        .minitv-banner {
+            width: 100%;
+        }
+
+        .minitv-banner > a {
+            display: block;
+        }
+
+        .minitv-banner img {
+            vertical-align: bottom;
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="minitv-container">
+        <div class="minitv-header">
+            <img src="https://m.media-amazon.com/images/G/31/img17/Home/AmazonTV/ktp_web/atv-logo2x.png" alt="" />
+        </div>
+        <video id="video" width="100%" controls autoplay></video>
+        <div class="minitv-video-heading">
+            <div class="minitv-video-title">Kaali Peeli Tales</div>
+            <a href="https://dl.amazon.in/redirect/ref=mm_1_avod_ex_KPT_unrec_home?campaignId=lJ4JmO&failureMode=AppStoreDDL&url=https%3A%2F%2Famazon.in%2Fminitv%2Fdetail%3Fpage%3Dhome%26dplnk%3DY%26mtv_pt%3Dexternal%26refMarker%3Davod_ex_KPT_unrec_home" class="minitv-video-parental">Parental Control</a>
+        </div>
+        <div class="minitv-video-metadata">
+            <div>Six unique stories around love and relationships</div>
+            <div>Starring: Vinay Pathak, Gauahar Khan, Sayani Gupta</div>
+            <div>Episode: Harra Bharra <span class="minitv-video-rating">U/A 16+ Alcohol use, sexual content, foul language</span></div>
+        </div>
+    </div>
+    <div class="minitv-banner">
+        <a href="https://dl.amazon.in/redirect/ref=mm_1_avod_ex_KPT_unrec_season?campaignId=RB56mO&failureMode=AppStoreDDL&url=https%3A%2F%2Fwww.amazon.in%2Fminitv%2Fdetail%3FcontentId%3Damzn1.dv.gti.d73f2b97-0c3a-415a-a286-5b7c2d790e7a%26page%3Dhome%26redirectTo%3Dtitle%26vodType%3DSeason%26refMarker%3Davod_ex_KPT_unrec_season%26dplnk%3DY%26mtv_pt%3Dexternal">
+            <img src="https://m.media-amazon.com/images/G/31/img17/Home/AmazonTV/ktp_web/banner2x.png" alt="Click here to visit miniTV app" />
+        </a>
+    </div>
+
+    <!-- Shaka Player compiled library: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.2.0/shaka-player.compiled.js"></script>
+    <script>
+        const manifestUri =
+            'https://d12kx4f65f7p3f.cloudfront.net/output/dash/1c81362a8ed04c36b71af095d6018594.mpd';
+
+        let isFirstPlayback;
+        let player;
+
+        function initApp() {
+            const finishTime = Date.now();
+            const loadTime = finishTime - startTime;
+            csaLogger("pageImpression", "1");
+            csaLogger("pageLoadTime", loadTime);
+            isFirstPlayback = true;
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const refMarkerValue = urlParams.get('refMarker');
+            if (refMarkerValue) {
+                csaLogger('refMarker', refMarkerValue);
+            }
+
+            // Install built-in polyfills to patch browser incompatibilities.
+            shaka.polyfill.installAll();
+
+            // Check to see if the browser supports the basic APIs Shaka needs.
+            if (shaka.Player.isBrowserSupported()) {
+                // Everything looks good!
+                initPlayer();
+            } else {
+                // This browser does not have the minimum set of APIs we need.
+                csaLogger('error', 'Browser not supported!');
+                console.error('Browser not supported!');
+            }
+        }
+
+        async function initPlayer() {
+            // Create a Player instance.
+            const video = document.getElementById('video');
+            player = new shaka.Player(video);
+
+            // Attach player to the window to make it easy to access in the JS console.
+            window.player = player;
+
+            // Listen for error events.
+            player.addEventListener('error', onErrorEvent);
+            // Listen for stream events.
+            video.addEventListener('play', onPlaying);
+            // Listen for buffering events.
+            player.addEventListener('buffering', onBufferingEvent);
+
+            // Try to load a manifest.
+            // This is an asynchronous process.
+            try {
+                await player.load(manifestUri);
+                // This runs if the asynchronous load is successful.
+                console.log('The video has now been loaded!');
+            } catch (e) {
+                // onError is executed if the asynchronous load fails.
+                onError(e);
+            }
+        }
+
+        function onPlaying() {
+            if (isFirstPlayback) {
+                isFirstPlayback = false;
+                csaLogger('onStream', 'startStream');
+                csaLogger('TTFF', player.getStats().loadLatency);
+            }
+        }
+
+        function onBufferingEvent() {
+            csaLogger('onBuffer', 'bufferStart');
+        }
+
+        function onErrorEvent(event) {
+            // Extract the shaka.util.Error object from the event.
+            onError(event.detail);
+        }
+
+        function onError(error) {
+            // Log the error.
+            csaLogger('error', error);
+            console.error('Error code', error.code, 'object', error);
+        }
+
+        function onPageRendered() {
+            const finishTime = Date.now();
+            const renderTime = finishTime - startTime;
+            csaLogger('renderTime', renderTime);
+        }
+
+        document.addEventListener('DOMContentLoaded', initApp);
+        window.addEventListener('load', onPageRendered);
+        document.addEventListener("visibilitychange", function onPageVisibilityChange() {
+            if (document.visibilityState === 'hidden') {
+                csaLogger("playbackTime", player.getStats().playTime);
+            }
+        });
+
+    </script>
+</body>
+
 </html>
