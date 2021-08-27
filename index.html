@@ -1,1 +1,12 @@
-
+<html>
+  <script>
+    document.addEventListener("visibilitychange", function onPageUnload() {
+      if (document.visibilityState === 'hidden') {
+        console.log("hiding);
+      }
+    });
+  </script>
+  <body>
+    test
+  </body>
+</html>
